@@ -23,53 +23,83 @@ NanoLink is a fast, minimal, and efficient URL shortener stack built with modern
 
 ## 📁 Project Structure
 
+A clean, modular architecture separating the frontend client from the backend API.
+
 ```text
 NanoLink/
-├── client/          # React + Vite frontend application
-└── server/          # Node.js + Express backend API
+├── client/                 # React + Vite Frontend
+│   ├── src/
+│   │   ├── assets/         # Static images, SVGs, etc.
+│   │   ├── pages/          # React route components
+│   │   ├── services/       # API integration logic
+│   │   ├── App.tsx         # Main application component
+│   │   └── main.tsx        # React entry point
+│   └── package.json
+└── server/                 # Node.js + Express Backend
+    ├── src/
+    │   ├── controllers/    # Route handlers
+    │   ├── interfaces/     # TypeScript types & models
+    │   ├── routes/         # Express API routes
+    │   ├── services/       # Business logic layer
+    │   ├── utils/          # Helper functions
+    │   ├── app.ts          # Express configuration
+    │   └── server.ts       # Backend entry point
+    ├── .env                # Environment variables (Create this)
+    └── package.json
 ```
 
 ---
 
-## 🛠️ Getting Started
+## 🛠️ Setup Flow & Installation
+
+Follow these steps to get the full stack running on your local machine.
 
 ### Prerequisites
+- **[Node.js](https://nodejs.org/)** (v18 or higher recommended)
+- **[MongoDB](https://www.mongodb.com/)** (Local instance or MongoDB Atlas URL)
 
-Make sure you have the following installed:
-- [Node.js](https://nodejs.org/) (v18 or higher recommended)
-- [MongoDB](https://www.mongodb.com/) (Local or Atlas URL)
-
-### 1. Clone the repository
+### Step 1: Clone the Repository
 ```bash
 git clone https://github.com/your-username/NanoLink.git
 cd NanoLink
 ```
 
-### 2. Setup the Server (Backend)
-```bash
-cd server
-npm install
-```
-Create a `.env` file in the `server` directory and configure your environment variables:
-```env
-PORT=5000
-MONGODB_URI=your_mongodb_connection_string
-```
-Start the development server:
-```bash
-npm run dev
-```
+### Step 2: Configure the Backend (Server)
+1. Navigate to the server directory:
+   ```bash
+   cd server
+   ```
+2. Install the required backend dependencies:
+   ```bash
+   npm install
+   ```
+3. Set up your environment variables. Create a `.env` file in the `server` folder:
+   ```env
+   PORT=5000
+   MONGODB_URI=your_mongodb_connection_string
+   ```
+4. Start the backend development server:
+   ```bash
+   npm run dev
+   ```
+   *The server should now be running on `http://localhost:5000`.*
 
-### 3. Setup the Client (Frontend)
-Open a new terminal window/tab:
-```bash
-cd client
-npm install
-```
-Start the Vite development server:
-```bash
-npm run dev
-```
+### Step 3: Configure the Frontend (Client)
+1. Open a **new terminal window/tab** and navigate to the client directory:
+   ```bash
+   cd client
+   ```
+2. Install the required frontend dependencies:
+   ```bash
+   npm install
+   ```
+3. Start the Vite development server:
+   ```bash
+   npm run dev
+   ```
+   *The app should now be running on your local port, typically `http://localhost:5173`.*
+
+> **💡 Tip:** Ensure the backend is running simultaneously with the frontend so API calls resolve correctly!
 
 ---
 
