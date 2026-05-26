@@ -12,8 +12,9 @@ export class UrlController {
 
     const code = urlService.createShortUrl(url);
 
+    const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
     res.json({
-      shortUrl: `http://localhost:3000/r/${code}`//if hosted thre should hosted url instead of localhost
+      shortUrl: `${baseUrl}/r/${code}`
     });
   }
  
