@@ -61,7 +61,7 @@ export default function ShortnerPage() {
           </button>
         </form>
 
-        {shortUrl && (
+        {shortUrl && (  
           <div className="result-container">
             <span className="result-label">Your Shortened URL</span>
             <div className="result-actions">
