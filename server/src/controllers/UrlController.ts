@@ -14,7 +14,7 @@ export class UrlController {
 
     const baseUrl = process.env.BASE_URL || 'http://localhost:3000';
     res.json({
-      shortUrl: `${baseUrl}/r/${code}`
+      shortUrl: `${baseUrl}/${code}`
     });
   }
  

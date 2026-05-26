@@ -7,6 +7,6 @@ const controller = new UrlController();
 
 router.post("/shorten", controller.shortenUrl);
 
-router.get("/r/:code", controller.redirectUrl);
+router.get("/:code", controller.redirectUrl);
 
 export default router;
