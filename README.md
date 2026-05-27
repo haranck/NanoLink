@@ -1,6 +1,6 @@
 # NanoLink 🔗
 
-[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://nano-link-lime.vercel.app/)
+[![Live Demo](https://img.shields.io/badge/Live_Demo-Vercel-black?style=for-the-badge&logo=vercel)](https://nano-link-lime.vercel.adpp/)
 
 NanoLink is a fast, minimal, and efficient URL shortener stack built with modern web technologies. It provides a seamless way to convert long URLs into clean, manageable, and trackable short links.
 
