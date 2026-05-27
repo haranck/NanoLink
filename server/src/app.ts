@@ -6,7 +6,7 @@ import urlRoutes from "./routes/urlRoutes";
 const app = express();
 
 app.use(cors({
-  origin: ["http://localhost:5173", "https://n-skz0.onrender.com"],
+  origin: ["http://localhost:5173", "https://nano-link-lime.vercel.app"],
   credentials: true
 }));
 app.use(express.json());
